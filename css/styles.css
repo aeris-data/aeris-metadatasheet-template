@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition:all .4s ease;
+}
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+	font-size: 16px;
+}
+
+body {
+    margin: 10px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 1.5rem;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	-webkit-box-sizing: content-box;
+	        box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+input {
+	max-width: 100%;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+    table-layout: fixed;
+}
+
+th,
+td {
+    padding: 5px;
+    border: 1px solid #969696;
+    vertical-align: middle;
+}
+
+thead, th {
+    background: #EEE;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #333;
+	font-family: Arial,sans-serif;
+	font-size: 1rem;
+	line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-weight: 400;
+	color:#555;
+}
+
+h1,
+h2,
+h3 {
+	border-bottom: 1px solid #CCC;
+    margin:10px 0;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h1 > a, h1 > a:active, h1 > a:focus, h1 > a:visited,
+h2 > a, h2 > a:active, h2 > a:focus, h2 > a:visited,
+h3 > a, h3 > a:active, h3 > a:focus, h3 > a:visited  {
+	color:#555;
+	text-decoration: none;
+}
+
+
+p {
+	margin: 10px 0;
+	text-align: justify;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+	margin-bottom: 30px;
+    padding: 20px;
+	background: #fafafa;
+	border-left:2px solid;
+	-webkit-box-shadow: 0 10px 6px -6px #bbb;
+	        box-shadow: 0 10px 6px -6px #bbb;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Cesures
+--------------------------------------------------------------*/
+p,
+a,
+td,
+th {
+	-webkit-hyphens: auto;
+	    -ms-hyphens: auto;
+	        hyphens: auto;
+	word-wrap: break-word;
+}
+
+code,
+pre {
+	white-space: pre-wrap;
+	word-wrap:break-word;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------
+# TEMPLATE
+--------------------------------------------------------------*/
+
+body {
+    background: #CCC;
+}
+
+/*--------------------------------------------------------------
+# HEADER
+--------------------------------------------------------------*/
+
+[aeris-metadatasheet] > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20px;
+    padding:5px 10px;
+    background:#FFF;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.6);
+}
+[aeris-metadatasheet] > header > h2 {
+    border:none;
+}
+
+[aeris-metadatasheet] [aeris-metadatasheet-projectsList] a {
+    background:rgb(219, 165, 65);
+    border-radius: 5px;
+    padding:3px 10px;
+    color:white; 
+    text-decoration: none;
+}
+[aeris-metadatasheet] [aeris-metadatasheet-projectsList] a:hover {
+    background:#CCC;
+}
+
+/*--------------------------------------------------------------
+# TABS
+--------------------------------------------------------------*/
+
+[aeris-metadatasheet] .tabs {
+    max-width: 1024px;
+    margin: 0 auto;
+	list-style-type:none;
+	position:relative;
+}
+
+[aeris-metadatasheet] .tabs label {
+	display:block;
+    padding:0px 20px;
+    border:1px solid #ccc;
+	border-radius:5px;
+	background:#ddd;
+	margin-top:5px;
+	cursor:pointer; /* changement de curseur de souris */
+}
+
+[aeris-metadatasheet] [type="radio"]:checked + label {
+    border-radius:5px 5px 0 0;
+    background:#FFF;
+	/* padding-top:10px; */
+}
+
+[aeris-metadatasheet] .tabs label:hover {
+	background:#AAA;
+	color:#FFF;
+}
+
+[aeris-metadatasheet] .tabs article,
+[type="radio"] {
+	display:none;
+	padding:20px;
+}
+
+[aeris-metadatasheet] .tabs article {
+    margin-bottom:10px;
+    border:1px solid #CCC;
+	border-radius:0 0 5px 5px;
+    background:#FFF;
+    color:#333;
+}
+
+[aeris-metadatasheet] [type="radio"]:checked ~ article {
+	display:block;
+}
+
+[aeris-metadatasheet] .tabs article > div {
+    display: flex;
+}
+
+[aeris-metadatasheet] .tabs article > div > aside {
+    width:400px;
+    margin-right:20px;
+}
+
+[aeris-metadatasheet] .tabs article > div > aside > a {
+    display: block;
+    padding:10px;
+    border-left:2px solid #E0E0E0;
+    text-decoration: none;
+    font-size:14px;
+    color:#333;
+}
+
+[aeris-metadatasheet] .tabs article > div > aside > a:hover {
+    border-left:2px solid #000;
+}
+
+[aeris-metadatasheet] .tabs article > div > div {
+    max-height: 768px;
+    overflow: scroll;
+}
+
+[aeris-metadatasheet] article[id="panel-dataset"] h3:not(:first-of-type) {
+    margin-top:40px;
+}
+
+@media (min-width:400px) {
+	[aeris-metadatasheet] .tabs label {	
+		float:left;
+		border-radius:5px 5px 0 0;
+		margin-top:0;
+		margin-right:1px;
+	}
+	
+	[aeris-metadatasheet] .tabs article {
+		clear:both;
+		position:absolute;
+		top:29px;
+		border-radius:0 5px 5px 5px;
+		margin-bottom:0;
+	}	
+}
